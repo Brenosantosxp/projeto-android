@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+            /* TODO O ESTILO APLICADO NO SITE */
+
+/* CÓDIGO INCORPORADO PELO GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Berkshire+Swash&family=Concert+One&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Kalnia+Glaze:wght@100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    
+/* COMANDO PARA USAR FONTES EXTERNAS , BAIXADAS PELO DAFONT 
+NOME DA FONTE SIMPLIFICADO + DIRETORIO DE DOWNLOAD 
+E FORMATO DA FONTE BAIXADA */
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype');
+    font-weight: normal;
+}
+
+:root { /* pseudo-classe / raiz do site / definicição para documento inteiro */
+   
+   /* VARIÁVEIS DE CORES P/ O SITE */
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+        
+   /* VARIÁVEIS DE FONTES USADAS NO SITE*/
+   --fonte-padrão: Arial , Verdana, Helvetica, sans-serif;
+   --fonte-destaque:"Bebas Neue", sans-serif;
+   --fonte-android: 'Android', cursive;
+}
+
+* { /* CONFIGURAÇÃO GLOBAL PARA TODOS OS ELEMENTOS */
+    margin: 0px;
+    padding: 0px;
+}
+
+body{ /* CORPO DO SITE E VARIÁVEIS */
+    background-color: var(--cor0);
+    font-family: var(--fonte-padrão);
+}
+
+a.externo::after { /* EMOJI DEPOIS DE QUALQUER LINK EXTERNO */
+    content: '\00A0\1F517'; /* ESPAÇO + EMOJIPEDIA */
+}
+
+header { /* CABEÇALHO DO SITE COM VARIÁVEL */
+    background-image: linear-gradient(to bottom, var(--cor3) ,var(--cor5) ); /* COR EM DEGRADÊ */ 
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;    
+}
+ 
+header > h1 { /* TÍTULO PRINCIPAL DO CABEÇALHO */
+    color:rgb(254, 254, 254);
+    font-family: var(--fonte-destaque);
+    margin-bottom: 20px;
+    font-size: 3em;
+    font-weight: normal; 
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267); 
+}
+
+header > p { /* PARAGRÁFO DO CABEÇALHO */
+    color: white;
+    font-size: 1.2em; 
+    font-family: var(--fonte-padrão); 
+    max-width: 600px;   
+    padding-right: 10px;  
+    padding-left: 10px;
+    margin: auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.315); 
+}
+
+nav { /* AREA DE NAVEGAÇÃO / MENU DO SITE */
+    background-color: var(--cor5);
+    padding: 10px; 
+    box-shadow: 0px 7px 7px rgba(0,0,0, 0.192); 
+}
+
+nav > a { /* EDITAR LINKS DO SITE / NAVEGAÇÃO / CABEÇALHO */
+    color: var(--cor1);
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition-duration: 0.3s; /* TEMPO DE TRANSIÇÃO AO PASSAR CURSOR EM CIMA */
+}
+
+nav > a:hover { /* ANIMAÇÃO AO PASSAR CURSOR NA AREA DE MENU DO SITE */
+    background-color: var(--cor3); /* COR DE FUNDO AO PASSAR CURSOR */
+    color: var(--cor5); /* COR DA FONTE AO PASSAR CURSOR */
+}
+
+main { /* CONTEÚDO PRINCIPAL DO SITE */
+    background-color: white;
+    min-width: 300px;
+    max-width: 1000px;
+    margin: auto;
+    margin-bottom: 30px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.414);
+
+}
+
+main p { /* PARAGRÁFOS DENTRO DO CONTEÚDO PRINCIPAL */ 
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 2em;
+    font-size: 1em;
+ }
+
+ main strong { /* TODOS O STRONG - (FORTE/CHAMATIVO) DO CONTEÚDO PRINCIPAL */
+    color: var(--cor4);
+    font-weight: bold; /* PESO DA FONTE - NEGRITO */
+}
+
+main a { /* LINKS DO CONTEÚDO PRINCIPAL */
+    text-decoration: none; /* SEM DECORAÇÃO */
+    font-weight: bold; /* NEGRITO */
+    color: var(--cor5);
+    background-color: var(--cor1);
+    padding: 2px 6px;
+}
+
+main a:hover { /* ANIMAÇÃO AO PASSAR CURSOR EM CIMA DO LINK DOS LINKS */
+    text-decoration:underline ;
+    color: var(--cor3);
+}
+
+main h1  { /* TÍTULO DO ARTIGO DO SITE */
+    color:var(--cor5);
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+main h2 { /* SUBTÍTULO  */
+    font-family: var(--fonte-android);
+    color: var(--cor4);
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent); /* IMAGEM DE FUNDO / COR DEGRAGÊ , ESQUERDA PARA DIREITA EM TRANSPARENTE */
+    text-indent: 8px;
+}
+
+main img { /* PARA TODAS AS IMAGENS DO CONTEÚDO PRINCIPAL */
+    width: 100%;
+}
+
+main img.pequena { /* SO PARA UMA IMAGEM ESPECIFICA INDO PELA CLASSE CRIADA ( pequena ) */
+    width: 350px;
+    display: block;
+    margin: auto;
+}
+
+div.video { /* CLASSE CRIADA P/ VIDEO NO HTML */
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 56.5%;
+    position: relative;
+}
+
+div.video > iframe { /* FORMATAR VIDEO QUE VEIO DO YOUTUBE */
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside {  /* CONTEÚDO PERIFÉRICO DO ARTIGO */
+    background-color: var(--cor1);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.280);
+}
+
+aside > h3 { /* SUBTITULO DO ASIDE */
+    background-color: var(--cor4);
+    color: white;
+    padding: 5px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+aside > ul { /* LISTA DO CONTEÚDO PERIFÉRICO */
+    list-style-position: inside; /* POSIÇÃO DA LISTA : DENTRO */
+    columns: 2; /* QUANTIDADE DE COLUNAS */
+    list-style-type: '\1F5F8\00A0\00A0';/* TIPO DE ESTILO DE LISTA EMOJI + ESPAÇO */
+}
+
+footer{ /* RODAPÉ DO SITE */
+    background-color: var(--cor5);
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+footer a { /* LINKS DO RODAPÉ */
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+} 
+
+footer a:hover { /* ANIMAÇÃO AO PASSAR CURSOR NO LINK DO RODAPÉ */
+    text-decoration: underline;
+    color: var(--cor1);
+}
+
+
